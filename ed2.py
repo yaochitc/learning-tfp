@@ -2,7 +2,6 @@ import tensorflow as tf
 import tensorflow_probability.python.edward2 as ed
 import tensorflow_probability as tfp
 
-
 def logistic_regression(features):
     coeffs = ed.Normal(loc=tf.zeros(features.shape[1]), scale=1., name="coeffs")
     intercept = ed.Normal(loc=0., scale=1., name='intercept')
